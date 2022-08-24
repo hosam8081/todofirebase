@@ -1,6 +1,6 @@
 {
-  "homepage": "http://hosam8081.github.io/todofirebase/",
-  "name": "todofirebase",
+  "homepage": "http://hosam8081.github.io/todo/",
+  "name": "todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
