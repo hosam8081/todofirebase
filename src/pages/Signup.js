@@ -56,7 +56,7 @@ const Signup = () => {
               className="border border-gray-4 px-2  mb-3 py-2 w-full cursor-pointer"
               value="signup"
             />
-            {error && <div className="text-center text-white">{error}</div>}
+            {error && <div className="text-center">{error}</div>}
             <div className="text-center">
               a member?
               <Link to="/login" className="text-primary">
