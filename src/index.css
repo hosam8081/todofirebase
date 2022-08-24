@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.head {
+  letter-spacing: 15px
+}
+.hero-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+}
+.checkbox {
+  @apply absolute top-1/2 left-3 -translate-y-1/2 w-6 h-6 leading-6 rounded-full border block cursor-pointer;
+}
+
+.checked {
+  background-image: linear-gradient(to right bottom,#4822d3d1,#c52db6ab);
+  border:none
+}
+.item:hover img, .item:hover button{
+  @apply opacity-100 visible block dark:text-white
+}
