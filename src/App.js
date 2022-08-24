@@ -7,7 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/todofirebase">
         <Routes>
           <Route element={<PrivateRoute />}>
             <Route path="/" element={<Home />} />
