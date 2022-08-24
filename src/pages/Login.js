@@ -3,7 +3,7 @@ import heroImg from "../images/bg-desktop-light.jpg";
 import { addDoc, setDoc, collection, doc } from "firebase/firestore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
 
@@ -63,6 +63,13 @@ const Login = () => {
               value="Login"
             />
             {error && "infaild email or password"}
+            <div className="text-center text-white">
+              not a member? 
+              <Link to='/signup' className="text-primary">
+                {" "}
+                register now
+              </Link>
+            </div>
           </form>
         </div>
       </div>

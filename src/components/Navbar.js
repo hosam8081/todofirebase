@@ -15,7 +15,7 @@ const Navbar = () => {
               <Link className="text-2xl" to={"/login"}>
                 login
               </Link>
-              <Link className="sm:pl-2 text-2xl" to={"/login"}>
+              <Link className="pl-2 text-2xl" to={"/signup"}>
                 sign
               </Link>
             </div>
