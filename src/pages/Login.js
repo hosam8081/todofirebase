@@ -33,11 +33,8 @@ const Login = () => {
   return (
     <>
     <Navbar />
-      <div className="relative">
-        <div className="h-[300px] w-full">
-          <img src={heroImg} alt="heroimg" className="w-full h-full" />
-        </div>
-        <div className="container absolute  py-24 top-0 left-1/2 -translate-x-1/2">
+      <div className="relative h-[calc(100vh-80px)]">
+        <div className="container absolute  py-24 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <form onSubmit={(e) => handleLogin(e)}>
             <div>
               <input
@@ -63,7 +60,7 @@ const Login = () => {
               value="Login"
             />
             {error && "infaild email or password"}
-            <div className="text-center text-white">
+            <div className="text-center">
               not a member? 
               <Link to='/signup' className="text-primary">
                 {" "}

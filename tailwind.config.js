@@ -33,7 +33,7 @@ module.exports = {
         6:'hsl(235, 24%, 19%)',
         7:'#bfc1d9'
       },
-      primary: "#20c997"
+      primary: "#0d6efd"
     },
     extend: { 
       boxShadow: {

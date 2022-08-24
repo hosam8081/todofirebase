@@ -10,31 +10,28 @@ const Signup = () => {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-  console.log(password.length);
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (password.length < 6) {
       setError("password digites should be bigger than 6");
+    } else {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          navigate("/login");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
   };
   return (
     <>
       <Navbar />
-      <div className="relative">
-        <div className="h-[300px] w-full">
-          <img src={heroImg} alt="heroimg" className="w-full h-full" />
-        </div>
-        <div className="container absolute  py-24 top-0 left-1/2 -translate-x-1/2">
+      <div className="relative h-[calc(100vh-80px)]">
+        <div className="container absolute  py-24 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <form onSubmit={(e) => handleLogin(e)}>
             <div>
               <input
@@ -60,9 +57,9 @@ const Signup = () => {
               value="signup"
             />
             {error && <div className="text-center text-white">{error}</div>}
-            <div className="text-center text-white">
+            <div className="text-center">
               a member?
-              <Link to="/signup" className="text-primary">
+              <Link to="/login" className="text-primary">
                 {" "}
                 login now
               </Link>
