@@ -4,9 +4,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Error from "./pages/Error";
 import PrivateRoute from "./components/PrivateRoute";
-import { useGlobalContext } from "./context/AuthContext";
 function App() {
-  const { darkMode } = useGlobalContext();
   return (
     <>
       <Router>
